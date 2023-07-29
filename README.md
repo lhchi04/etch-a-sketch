@@ -5,11 +5,11 @@ A game where you can create your sketchboard with the size of the grid as you wa
 
 ## Usage
 
-Visit the webpage via this [link]()
+Visit the webpage via this [link](https://lhchi04.github.io/etch-a-sketch/)
 
 ## Credits
 
-Font used: [LCD Solid](https://www.fontspace.com/lcd-solid-font-f11346) 
+Font used: [LCD Solid](https://www.fontspace.com/lcd-solid-font-f11346)
 (license: Public Domain)
 
 

@@ -10,8 +10,12 @@
   <body>
     <h1>Etch-a-Sketch</h1>
     <p>Create your own sketchboard!<br>Hover your mouse over the board to sketch!</p>
-    <button>Change grid size</button>
-    <p class="rec">(Recommended size: 50x50)</p>
-    <div id="container"></div>
+    <button class="grid">Change grid size</button>
+    <div id="main">
+      <div id="selection">
+        <div id="mode"><p>Color Mode</p></div>
+      </div>
+      <div id="big-container"><div id="container"></div></div>
+    </div>
   </body>
 </html>
