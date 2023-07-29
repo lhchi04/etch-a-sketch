@@ -1,8 +1,61 @@
+@font-face {
+  font-family: 'lcd-solid';
+  src: url('LcdSolid-VPzB.ttf');
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'lcd-solid';
+  color: wheat;
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: wheat;
+  font-family: 'Courier New', monospace;
+  font-size: 30px;
+}
+
+button {
+  margin: 20px;
+  background-color: wheat;
+  color: #98694d;
+  font-size: 20px;
+  padding: 20px 50px;
+  border-radius: 30px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  transition: transform 400ms;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: transfrom 140ms;
+  box-shadow: 0px 0px 35px 9px rgba(255,255,255,0.8);
+  color: #553d3a;
+}
+
+.rec {
+  font-size: 20px;
+  margin: 0px;
+}
+
 #container {
   display: flex;
   flex-direction: column;
-  width: 960px;
-  height: 960px;
+  width: 640px;
+  height: 640px;
+  flex-basis: 1;
+  margin: 30px;
 }
 
 .container2 {
@@ -12,5 +65,5 @@
 
 .square {
   flex: 1;
-  border: black solid 0.5px;
+  border: white solid 0.5px;
 }

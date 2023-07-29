@@ -1,6 +1,6 @@
 let col = [];
 let row = [];
-let size = 16;
+let size;
 
 function draw(size) {
   for (let i= 0; i < size; i++) { // Create rows
@@ -19,7 +19,7 @@ function pen() {
   const allSquares = document.querySelectorAll('.square');
   allSquares.forEach((square) => {
     square.addEventListener('mouseover', () => {
-      square.style.cssText = "background-color: black;";
+      square.style.cssText = "background-color: white;";
   })
 })
 }
@@ -28,7 +28,11 @@ const container = document.querySelector('#container');
 
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
-  size = prompt('Enter the grid size:');
+  size = prompt('Enter a number between 2 and 100:');
+  if (size < 2 || size > 100) {
+    size = prompt('Enter a number between 2 and 100:');
+  }
+
   while (container.lastElementChild) {
     container.removeChild(container.lastElementChild);
   }
