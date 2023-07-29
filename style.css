@@ -1,0 +1,16 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 960px;
+  height: 960px;
+}
+
+.container2 {
+  display: flex;
+  flex: 1;
+}
+
+.square {
+  flex: 1;
+  border: black solid 0.5px;
+}
