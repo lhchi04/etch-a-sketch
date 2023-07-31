@@ -37,7 +37,7 @@ function penColor() {
 function erase() {
   const allSquares = document.querySelectorAll('.square');
   allSquares.forEach((square) => {
-    square.addEventListener('mousedown', () => {
+    square.addEventListener('mouseover', () => {
       square.style.cssText = "background-color: black;";
     })
   })
