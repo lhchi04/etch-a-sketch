@@ -5,6 +5,9 @@
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="game.js" defer></script>
+    <link rel="stylesheet" href="coloris.min.css" />
+    <script src="coloris.min.js"></script>
+    <script src="color.js"></script>
   </head>
 
   <body>
@@ -13,7 +16,10 @@
     <button class="grid">Change grid size</button>
     <div id="main">
       <div id="selection">
-        <div id="mode"><p>Color Mode</p></div>
+        <div id="mode">
+          <p>Color Mode</p>
+          <input class="mode" type="text" data-coloris />
+        </div>
         <div id="erase"></div>
       </div>
       <div id="big-container"><div id="container"></div></div>

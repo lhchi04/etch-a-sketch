@@ -10,8 +10,9 @@
 }
 
 #selection {
-  flex-basis: 20%;
+  flex-basis: 30%;
   flex-grow: 1;
+  flex-shrink: 1;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -21,7 +22,7 @@
 #big-container {
   display: flex;
   justify-content: center;
-  flex-basis: 80%;
+  flex-basis: 70%;
 }
 
 #mode, #erase {
@@ -78,7 +79,7 @@ p {
   font-size: 30px;
 }
 
-button {
+button, input {
   background-color: wheat;
   color: #98694d;
   font-size: 20px;
@@ -87,6 +88,10 @@ button {
   font-family: 'Courier New', monospace;
   font-weight: bold;
   transition: transform 400ms;
+}
+
+input {
+  display: flex;
 }
 
 button:hover {

@@ -15,11 +15,11 @@ function draw(size) {
   }
 }
 
-function pen() {
+function pen(color) {
   const allSquares = document.querySelectorAll('.square');
   allSquares.forEach((square) => {
     square.addEventListener('mouseover', () => {
-      square.style.cssText = "background-color: white;";
+      square.style.cssText = `background-color: ${color};`;
     })
   })
 }
@@ -37,7 +37,7 @@ function penColor() {
 function erase() {
   const allSquares = document.querySelectorAll('.square');
   allSquares.forEach((square) => {
-    square.addEventListener('mouseover', () => {
+    square.addEventListener('mousedown', () => {
       square.style.cssText = "background-color: black;";
     })
   })
@@ -50,12 +50,10 @@ defaultMode.classList.add('mode');
 const rainbowMode = document.createElement('button');
 rainbowMode.textContent = 'Random color';
 rainbowMode.classList.add('mode');
-const colorMode = document.createElement('button');
-colorMode.textContent = 'Color';
-colorMode.classList.add('mode');
-mode.append(defaultMode, rainbowMode, colorMode);
 
-defaultMode.addEventListener('click', () => pen());
+mode.append(defaultMode, rainbowMode);
+
+defaultMode.addEventListener('click', () => pen('#ffffff'));
 rainbowMode.addEventListener('click', () => penColor());
 
 const clear = document.querySelector('#erase');
@@ -78,9 +76,8 @@ clearButton.addEventListener('click', () => {
 
 document.addEventListener("DOMContentLoaded", function() {
   draw(size);
-  pen();
+  pen('#ffffff');
 });
-
 
 const container = document.querySelector('#container');
 
@@ -94,8 +91,17 @@ grid.addEventListener('click', () => {
     container.removeChild(container.lastElementChild);
   }
   draw(size);
-  pen();
+  pen('#ffffff');
 })
+
+const colorInput = document.querySelector('input');
+
+Coloris({
+  onChange: (color) => {
+    pen(color);
+    colorInput.style.cssText = `color: ${color}`;
+  }
+});
 
 
 
