@@ -34,18 +34,47 @@ function penColor() {
   })
 }
 
+function erase() {
+  const allSquares = document.querySelectorAll('.square');
+  allSquares.forEach((square) => {
+    square.addEventListener('mouseover', () => {
+      square.style.cssText = "background-color: black;";
+    })
+  })
+}
+
 const mode = document.querySelector('#mode');
 const defaultMode = document.createElement('button');
 defaultMode.textContent = 'Default';
 defaultMode.classList.add('mode');
 const rainbowMode = document.createElement('button');
-rainbowMode.textContent = 'Random color'
+rainbowMode.textContent = 'Random color';
 rainbowMode.classList.add('mode');
-mode.append(defaultMode, rainbowMode);
+const colorMode = document.createElement('button');
+colorMode.textContent = 'Color';
+colorMode.classList.add('mode');
+mode.append(defaultMode, rainbowMode, colorMode);
 
 defaultMode.addEventListener('click', () => pen());
 rainbowMode.addEventListener('click', () => penColor());
 
+const clear = document.querySelector('#erase');
+const eraseButton = document.createElement('button');
+eraseButton.textContent = 'Erase';
+eraseButton.classList.add('erase');
+const clearButton = document.createElement('button');
+clearButton.textContent = 'Clear';
+clearButton.classList.add('erase');
+clear.append(eraseButton, clearButton);
+
+eraseButton.addEventListener('click', () => {
+  erase();
+});
+
+clearButton.addEventListener('click', () => {
+  const allSquares = document.querySelectorAll('.square');
+  allSquares.forEach((square) => square.style.cssText = `background-color: black;`);
+});
 
 document.addEventListener("DOMContentLoaded", function() {
   draw(size);

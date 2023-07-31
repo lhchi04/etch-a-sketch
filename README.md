@@ -5,7 +5,7 @@ A game where you can create your sketchboard with the size of the grid as you wa
 
 ## Usage
 
-Visit the webpage via this [link](https://lhchi04.github.io/etch-a-sketch/)
+[Live Demo](https://lhchi04.github.io/etch-a-sketch/)
 
 ## Credits
 
